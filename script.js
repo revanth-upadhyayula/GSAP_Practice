@@ -33,7 +33,13 @@ tl.from(".step", {
       pin:true
   }
 });
+const menuToggle = document.querySelector('.menu-toggle');
+const part2 = document.querySelector('#part2');
 
+menuToggle.addEventListener('click', () => {
+  part2.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
 
 // Initialize Particles.js for #page1
 particlesJS("particles-js", {
