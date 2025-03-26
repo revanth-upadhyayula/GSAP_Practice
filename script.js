@@ -14,7 +14,7 @@ tl.from("#fuzzy-ensemble .card", {
         end: "bottom -100%", // End when #page2’s bottom hits the top of the viewport
         scrub: 1,
         pin: true,
-        markers: true
+        // markers: true
     }
 });
 
@@ -39,7 +39,7 @@ tl.from(".step", {
 particlesJS("particles-js", {
     particles: {
       number: {
-        value: 40, // Number of particles
+        value: 100, // Number of particles
         density: {
           enable: true,
           value_area: 800,
@@ -56,7 +56,7 @@ particlesJS("particles-js", {
         random: true,
       },
       size: {
-        value: 1,
+        value: 1.25,
         random: true,
       },
       line_linked: {
@@ -64,7 +64,7 @@ particlesJS("particles-js", {
       },
       move: {
         enable: true,
-        speed: 0.35, // Slow movement for a subtle effect
+        speed: 0.25, // Slow movement for a subtle effect
         direction: "none",
         random: true,
         straight: false,
@@ -77,11 +77,11 @@ particlesJS("particles-js", {
       events: {
         onhover: {
           enable: true,
-          mode: "repulse", // Particles move away on hover
+          mode: "none", // Particles move away on hover
         },
         onclick: {
           enable: true,
-          mode: "push", // Add particles on click
+          mode: "none", // Add particles on click
         },
         resize: true,
       },

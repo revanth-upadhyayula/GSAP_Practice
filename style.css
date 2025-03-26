@@ -135,10 +135,13 @@ body {
   justify-content: center;
   border-bottom: 0.1px solid #adacac3c;
   flex-direction: column;
+  z-index: 2;
 }
 #text{
   width: 80%;
   height: 20%;
+  position: relative;
+  bottom: 7%;
 }
 #text p{
   color: #adacac;
@@ -150,28 +153,53 @@ body {
   font-size: 3.5rem;
   text-align: center;
   color: #adacac;
+  font-family: "Orbitron", sans-serif;
 }
-.drop-area {
-  width: 70%;
-  height: 50%;
-  border: 1.5px dashed #adacac;
+.upload-container {
+  margin-top: 20px;
+  z-index: 2;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(160, 158, 158);
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  margin: 20px auto;
-  border-radius: 18px;
-  z-index: 2;
-  /* position: absolute;
-  top: 15%; */
-  background-color: rgba(215, 215, 215, 0.027);
-  z-index: 2;
+  gap: 10px;
 }
-.drop-area.active {
-  background-color: rgba(255, 255, 255, 0.1);
+#upload-container a{
+  text-decoration: none;
+  color: white;
+}
+#uploadBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.052);
+  border:1px solid #a7a7a75b;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 2;
+  width: 35%;
+}
+#knowMore {
+  padding: 10px ;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.052);
+  border:1px solid #a7a7a75b;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 2;
+  width: 35%;
+}
+
+#uploadBtn:hover {
+  transform:scale(1.025);
+}
+#knowMore:hover{
+  transform:scale(1.025);
 }
 .gallery {
   display: flex;

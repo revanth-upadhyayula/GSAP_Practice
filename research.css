@@ -22,7 +22,22 @@ body {
     font-family: "Ubuntu", sans-serif;
     line-height: 1.6;
 }
-
+#back{
+    width: 10px;
+    height: 10px;
+    font-size: 40px;
+    position: fixed;
+    left: 4%;
+    top: 14%;
+}
+#back:hover{
+    cursor: pointer;
+}
+#back i{
+    border-radius: 50%;
+    color: black;
+    background-color: #adacac;
+}
 /* Research container */
 .research {
     width: 100%;
@@ -57,12 +72,13 @@ body {
 
 .badge {
     display: inline-block;
-    background-color: #e6f0fa;
-    color: #1e90ff;
+    background-color: rgba(255, 255, 255, 0.052);
+    color: whitesmoke;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 14px;
     margin-bottom: 20px;
+    border: 1px solid #a7a7a75b;
 }
 
 .methodology-header h2 {
