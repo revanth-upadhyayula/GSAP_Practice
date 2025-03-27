@@ -29,7 +29,7 @@ body {
   font-size: 25px;
   background-color: transparent;
   color: rgb(142, 142, 142);
-  position: fixed;
+  /* position: fixed; */
   top: 3rem;
   width: 100%;
   z-index: 10;
@@ -137,7 +137,8 @@ body {
   color: white;
 }
 
-#uploadBtn, #knowMore {
+#uploadBtn,
+#knowMore {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
@@ -155,7 +156,8 @@ body {
   padding: 10px;
 }
 
-#uploadBtn:hover, #knowMore:hover {
+#uploadBtn:hover,
+#knowMore:hover {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -296,6 +298,7 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .step {
   display: flex;
   align-items: center;
@@ -345,7 +348,6 @@ body {
   text-wrap: nowrap;
 }
 
-
 /* Page 4 remains unchanged */
 #page4 {
   width: 100%;
@@ -363,7 +365,8 @@ body {
   transition: all 0.4s ease;
 }
 
-.heading22, .heading21 {
+.heading22,
+.heading21 {
   font-size: 6rem;
   text-transform: uppercase;
   font-family: "Orbitron", sans-serif;
@@ -372,29 +375,28 @@ body {
   transition: all 0.4s ease;
 }
 
-/* Updated Media Queries */
-@media screen and (max-width: 1300px) {
+/* Responsive Media Queries */
+@media (max-width: 1300px) {
   #nav {
-    padding: 10px 10rem;
-    gap: 5%;
-    font-size: 20px;
+    padding: 10px 8rem;
+    font-size: 22px;
   }
 
   #nav img {
-    width: 40px;
+    width: 45px;
   }
 
   #part2 {
-    gap: 25px;
+    gap: 40px;
     font-size: 16px;
+  }
+
+  .nav-bar {
+    font-size: 15px;
   }
 
   #page1 {
     padding: 50px 15px 15px;
-  }
-
-  .main-head {
-    font-size: 2.8rem;
   }
 
   #text {
@@ -402,89 +404,185 @@ body {
   }
 
   #text p {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .main-head {
+    font-size: 3rem;
   }
 
   .upload-container {
-    width: 50%;
-    gap: 15px;
+    width: 40%;
   }
 
   #page1 h1 {
-    font-size: 18rem;
+    font-size: 20rem;
   }
 
   /* Page 2 */
   .card-container {
     gap: 25px;
     padding: 0 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .card {
-    padding: 20px;
-    min-height: 110px;
+    max-width: 350px;
+    min-height: 150px;
   }
 
   /* Page 3 */
-  
+  .process-heading {
+    font-size: 4.5rem;
+    left: 6rem;
+  }
+
+  .step {
+    width: 85%;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .heading22,
+  .heading21 {
+    font-size: 5rem;
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1092px) {
   #nav {
-    padding: 10px 30px;
-    font-size: 20px;
-  }
-
-  #nav img {
-    width: 40px;
-  }
-
-  #part2 {
-    gap: 25px;
-    font-size: 16px;
+    padding: 10px 6rem;
   }
 
   #page1 {
-    padding: 50px 15px 15px;
-  }
-
-  .main-head {
-    font-size: 2.8rem;
+    padding: 50px 10px 10px;
   }
 
   #text {
-    width: 90%;
-  }
-
-  #text p {
-    font-size: 18px;
+    width: 95%;
   }
 
   .upload-container {
     width: 50%;
-    gap: 15px;
   }
 
-  #page1 h1 {
-    font-size: 18rem;
+  /* Page 2 */
+  .card-container {
+    gap: 20px;
+    padding: 0 10px;
   }
-  
-  .step p{
-    text-wrap: wrap;
+
+  /* Page 3 */
+  .process-heading {
+    left: 4rem;
   }
-  .heading22, .heading21 {
-    font-size: 4.5rem;
+
+  .step {
+    width: 90%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 992px) {
+  #nav {
+    padding: 10px 4rem;
+    font-size: 20px;
+  }
+
+  #part2 {
+    gap: 30px;
+    font-size: 15px;
+  }
+
+  .nav-bar {
+    font-size: 14px;
+  }
+
+  #text p {
+    font-size: 18px;
+    text-wrap: wrap;
+  }
+
+  .main-head {
+    font-size: 2.5rem;
+  }
+
+  .upload-container {
+    width: 60%;
+  }
+
+  #page1 h1 {
+    font-size: 16rem;
+  }
+
+  /* Page 2 */
+  #page2 {
+    padding: 80px 20px 20px;
+    min-height: 120vh; /* Increased to prevent overlap */
+    margin-top: 20px; /* Add space below #page1 */
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-container {
+    gap: 15px;
+    padding: 0 20px;
+    /* top: 20%; Adjusted to prevent overlap */
+    transform: translateY(-57%); /* Adjusted to prevent overlap */
+    max-width: 800px; /* Constrain width */
+    
+  }
+
+  .card {
+    max-width: 90%; /* Constrain card width */
+    min-height: 180px;
+    padding: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    padding: 80px 20px 20px;
+    max-height: none; /* Remove max-height to allow natural height */
+    min-height: 120vh; /* Increased to prevent overlap */
+    margin-top: 20px; /* Add space below #page2 */
+  }
+
+  .process-heading {
+    font-size: 4rem;
+    left: 2rem; /* Reduced offset */
+    text-align: center; /* Center the heading */
+  }
+
+  .process-steps {
+    gap: 15px;
+    padding: 0 20px;
+    max-width: 800px; /* Constrain width */
+  }
+
+  .step {
+    width: 85%; /* Constrain step width */
+    padding: 15px;
+    min-height: 100px;
+  }
+
+  .step p {
+    text-wrap: wrap;
+  }
+
+  .heading22,
+  .heading21 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
   #nav {
     padding: 15px 20px;
     background: rgba(16, 16, 16, 0.95);
   }
 
   #nav img {
-    width: 35px;
+    width: 40px;
     position: static;
     margin: 0;
   }
@@ -534,19 +632,17 @@ body {
     padding: 80px 15px 15px;
   }
 
-  .main-head {
-    font-size: 2rem;
-  }
-
   #text {
     width: 100%;
-    height: auto;
     bottom: 5%;
   }
 
   #text p {
     font-size: 16px;
-    text-wrap: wrap;
+  }
+
+  .main-head {
+    font-size: 2rem;
   }
 
   .upload-container {
@@ -555,13 +651,14 @@ body {
     gap: 15px;
   }
 
-  #uploadBtn, #knowMore {
+  #uploadBtn,
+  #knowMore {
     width: 70%;
     padding: 12px;
   }
 
   #page1 h1 {
-    font-size: 10rem;
+    font-size: 12rem;
     bottom: 2%;
   }
 
@@ -576,18 +673,23 @@ body {
 
   /* Page 2 */
   #page2 {
-    padding: 80px 10px 10px;
-    min-height: auto;
+    padding: 80px 15px 15px;
+    min-height: 150vh; /* Increased to prevent overlap */
+    margin-top: 30px; /* Add more space below #page1 */
   }
 
   .card-container {
-    gap: 20px;
-    padding: 0 10px;
+    gap: 15px;
+    padding: 0 15px;
+    top: 10%; /* Further adjusted to prevent overlap */
+    transform: translateY(-20%); /* Further adjusted to prevent overlap */
+    max-width: 600px; /* Constrain width */
   }
 
   .card {
     padding: 20px;
-    min-height: 200px;
+    min-height: 180px;
+    max-width: 90%; /* Constrain card width */
   }
 
   .card h2 {
@@ -596,22 +698,30 @@ body {
 
   /* Page 3 */
   #page3 {
-    padding: 80px 10px 10px;
-    min-height: auto;
+    padding: 80px 15px 15px;
+    max-height: none; /* Remove max-height to allow natural height */
+    min-height: 150vh; /* Increased to prevent overlap */
+    margin-top: 30px; /* Add more space below #page2 */
   }
 
   .process-heading {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 3rem;
+    left: 0; /* Center the heading */
+    bottom: 0.5rem;
+    text-align: center; /* Center the heading */
   }
 
   .process-steps {
     gap: 15px;
-    padding: 0 10px;
+    padding: 0 15px;
+    max-width: 600px; /* Constrain width */
   }
 
   .step {
     padding: 15px;
+    width: 90%; /* Constrain step width */
+    height: auto;
+    min-height: 100px;
   }
 
   .step h3 {
@@ -629,30 +739,26 @@ body {
   }
 
   #head2 {
-    position: static;
-    text-align: center;
+    /* position: static; */
+    /* text-align: center; */
   }
 
-  .heading22, .heading21 {
+  .heading22,
+  .heading21 {
     font-size: 3rem;
   }
 }
 
-/* Mobile Version Kept as You Liked */
-@media screen and (max-width: 480px) {
+@media (max-width: 576px) {
   #nav {
     padding: 10px 15px;
   }
 
   #nav img {
-    width: 30px;
+    width: 35px;
   }
 
   .menu-toggle {
-    font-size: 25px;
-  }
-
-  .menu-toggle.active::before {
     font-size: 25px;
   }
 
@@ -669,23 +775,26 @@ body {
     padding: 70px 10px 10px;
   }
 
-  .main-head {
-    font-size: 1.5rem;
-  }
-
   #text p {
     font-size: 14px;
   }
 
-  .upload-container {
-    width: 100%;
-    gap: 10px;
+  .main-head {
+    font-size: 1.8rem;
   }
 
-  #uploadBtn, #knowMore {
-    width: 85%;
+  .upload-container {
+    width: 90%;
+  }
+
+  #uploadBtn,
+  #knowMore {
+    width: 80%;
     font-size: 0.9rem;
-    padding: 10px;
+  }
+
+  #page1 h1 {
+    font-size: 10rem;
   }
 
   .gallery {
@@ -693,28 +802,26 @@ body {
   }
 
   .uploaded-img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 
-  #page1 h1 {
-    font-size: 6rem;
-  }
-
-  /* Page 2 Mobile Version */
+  /* Page 2 */
   #page2 {
     padding: 70px 5px 5px;
   }
 
   .card-container {
-    gap: 15px;
+    gap: 10px;
     padding: 0 5px;
+    top: 30%;
+    transform: translateY(-60%);
   }
 
   .card {
     padding: 15px;
     font-size: 16px;
-    min-height: 180px;
+    min-height: 160px;
   }
 
   .card h2 {
@@ -722,10 +829,14 @@ body {
     margin-bottom: 10px;
   }
 
-  /* Page 3 Mobile Version */
+  /* Page 3 */
+  #page3 {
+    padding: 70px 5px 5px;
+  }
+
   .process-heading {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    left: 1rem;
   }
 
   .process-steps {
@@ -735,12 +846,8 @@ body {
 
   .step {
     padding: 12px;
-  }
-
-  .step-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 95%;
+    min-height: 90px;
   }
 
   .step h3 {
@@ -751,7 +858,253 @@ body {
     font-size: 0.9rem;
   }
 
-  .heading22, .heading21 {
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  #page4 {
+    padding: 20px 5px;
+  }
+
+  .heading22,
+  .heading21 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #nav {
+    padding: 10px 10px;
+  }
+
+  #nav img {
+    width: 30px;
+  }
+
+  .menu-toggle {
+    font-size: 22px;
+  }
+
+  #part2 {
+    gap: 20px;
+  }
+
+  .nav-bar {
+    font-size: 14px;
+  }
+
+  #page1 {
+    padding: 60px 5px 5px;
+  }
+
+  #text p {
+    font-size: 12px;
+  }
+
+  .main-head {
+    font-size: 1.5rem;
+  }
+
+  .upload-container {
+    width: 100%;
+  }
+
+  #uploadBtn,
+  #knowMore {
+    width: 90%;
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  #page1 h1 {
+    font-size: 8rem;
+  }
+
+  .uploaded-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Page 2 */
+  #page2 {
+    padding: 60px 5px 5px;
+    min-height: 100vh;
+  }
+
+  .card-container {
+    gap: 8px;
+    /* top: 20%; */
+    transform: translateY(-30%);
+  }
+
+  .card {
+    padding: 10px;
+    font-size: 14px;
+    min-height: 140px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    padding: 60px 5px 5px;
+  }
+
+  .process-heading {
     font-size: 2rem;
+    left: 0.5rem;
+  }
+
+  .step {
+    padding: 10px;
+    width: 100%;
+    min-height: 80px;
+  }
+
+  .step h3 {
+    font-size: 1.1rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+  }
+
+  .step-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  #page4 {
+    padding: 20px 5px;
+  }
+
+  .heading22,
+  .heading21 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #nav {
+    padding: 8px 5px;
+  }
+
+  #nav img {
+    width: 25px;
+  }
+
+  .menu-toggle {
+    font-size: 20px;
+  }
+
+  #part2 {
+    padding: 60px 10px 10px;
+    gap: 15px;
+  }
+
+  .nav-bar {
+    font-size: 12px;
+  }
+
+  #page1 {
+    padding: 50px 5px 5px;
+  }
+
+  #text p {
+    font-size: 10px;
+  }
+
+  .main-head {
+    font-size: 1.2rem;
+  }
+
+  .upload-container {
+    gap: 8px;
+  }
+
+  #uploadBtn,
+  #knowMore {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  #page1 h1 {
+    font-size: 6rem;
+  }
+
+  .uploaded-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Page 2 */
+  #page2 {
+    padding: 50px 5px 5px;
+  }
+
+  .card-container {
+    gap: 5px;
+    top: 10%;
+    transform: translateY(-20%);
+  }
+
+  .card {
+    padding: 8px;
+    font-size: 12px;
+    min-height: 120px;
+  }
+
+  .card h2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    padding: 50px 5px 5px;
+  }
+
+  .process-heading {
+    font-size: 1.8rem;
+    left: 0;
+    bottom: 0;
+  }
+
+  .process-steps {
+    gap: 8px;
+  }
+
+  .step {
+    padding: 8px;
+    min-height: 70px;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+  }
+
+  .step p {
+    font-size: 0.8rem;
+  }
+
+  .step-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  #page4 {
+    padding: 20px 5px;
+  }
+
+  .heading22,
+  .heading21 {
+    font-size: 1.8rem;
   }
 }
